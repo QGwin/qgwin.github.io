@@ -1,0 +1,83 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* Используем 8-битный шрифт */
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Чёрный фон */
+    color: #00FF00; /* Зелёный цвет текста */
+    text-align: center;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+    border-bottom: 2px solid #00FF00; /* Зелёная рамка */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 1px 1px #000;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.inner {
+    display: flex;
+    gap: 20px;
+}
+
+.item {
+    background: #222;
+    border: 3px solid #00FF00; /* Зелёная рамка для элемента */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.img {
+    width: 80px;
+    height: 80px;
+}
+
+.btn {
+    background-color: #00FF00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #00CC00;
+    transform: translateY(-2px);
+}
+
+.usercard {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    color: #00FF00;
+    font-size: 1.1em;
+}

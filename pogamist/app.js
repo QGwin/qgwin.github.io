@@ -21,7 +21,7 @@ btn1.addEventListener("click", function () {
     if (tg.MainButton.isVisible) {
         tg.MainButton.hide();
     } else {
-        setMainButton("трек сюда", "1");
+        setMainButton("тык", "1");
     }
 });
 
