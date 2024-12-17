@@ -1,24 +1,28 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #1a1a1a;
+    color: #00ffcc; /* Неоновый цвет */
+    text-align: center;
+    overflow: hidden;
 }
 
 header {
-    text-align: center;
+    background-color: #0d0d0d;
     padding: 20px;
-    background-color: #2cab37;
-    color: white;
+    border-bottom: 1px solid #00ffcc;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
 }
 
 h1 {
-    margin: 0;
     font-size: 2.5em;
+    filter: drop-shadow(0 0 5px #00ffcc);
 }
 
 p {
     font-size: 1.2em;
+    filter: drop-shadow(0 0 3px #00ffcc);
 }
 
 .container {
@@ -32,46 +36,51 @@ p {
 .inner {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .item {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.2s;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .item:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
 }
 
 .img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
 .btn {
-    background-color: #2cab37;
-    color: white;
+    background-color: #00cc99;
+    color: #000;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-    background-color: #239b35;
+    background-color: #00ffcc;
+    transform: translateY(-2px);
 }
 
 .usercard {
     margin-top: 20px;
     padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    filter: drop-shadow(0 0 10px #00ffcc);
 }
