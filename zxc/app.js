@@ -1,6 +1,7 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 
+// Настройка цвета главной кнопки
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
 
@@ -8,29 +9,32 @@ let item = "";
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 
+// Функция для настройки главной кнопки
+function setMainButton(text, itemValue) {
+    tg.MainButton.setText(text);
+    item = itemValue;
+    tg.MainButton.show();
+}
+
+// Обработчик для первой кнопки
 btn1.addEventListener("click", function () {
     if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-    }
-
-    else {
-            tg.MainButton.setText("Вывести информацию по овену");
-            item = "1";
-            tg.MainButton.show();
+        tg.MainButton.hide();
+    } else {
+        setMainButton("Вывести информацию по овену", "1");
     }
 });
 
+// Обработчик для второй кнопки
 btn2.addEventListener("click", function () {
     if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-    }
-    else {
-            tg.MainButton.setText("Вывести информацию по тельцу");
-            item = "2";
-            tg.MainButton.show();
+        tg.MainButton.hide();
+    } else {
+        setMainButton("Вывести информацию по тельцу", "2");
     }
 });
 
-Telegram.WebApp.onEvent("mainButtonClicked", function () {
+// Отправка данных при нажатии на главную кнопку
+tg.onEvent("mainButtonClicked", function () {
     tg.sendData(item);
 });
