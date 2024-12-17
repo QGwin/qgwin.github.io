@@ -16,23 +16,16 @@ function setMainButton(text, itemValue) {
     tg.MainButton.show();
 }
 
-// Обработчик для первой кнопки
+// Обработчик для кнопки
 btn1.addEventListener("click", function () {
     if (tg.MainButton.isVisible) {
         tg.MainButton.hide();
     } else {
-        setMainButton("Вывести информацию по овену", "1");
+        setMainButton("трек сюда", "1");
     }
 });
 
-// Обработчик для второй кнопки
-btn2.addEventListener("click", function () {
-    if (tg.MainButton.isVisible) {
-        tg.MainButton.hide();
-    } else {
-        setMainButton("Вывести информацию по тельцу", "2");
-    }
-});
+
 
 // Отправка данных при нажатии на главную кнопку
 tg.onEvent("mainButtonClicked", function () {
