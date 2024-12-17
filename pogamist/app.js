@@ -25,6 +25,14 @@ btn1.addEventListener("click", function () {
     }
 });
 
+btn1.addEventListener("click", function () {
+    if (tg.MainButton.isVisible) {
+        tg.MainButton.hide();
+    } else {
+        setMainButton("тык", "2");
+    }
+});
+
 
 
 // Отправка данных при нажатии на главную кнопку
